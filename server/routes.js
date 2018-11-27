@@ -27,6 +27,12 @@ module.exports = app => {
     })
   })
 
+  router.get('/bases-locales/stats', (req, res) => {
+    app.render(req, res, '/bases-locales/stats', {
+      ...req.query
+    })
+  })
+
   router.get('/bases-locales/validateur', (req, res) => {
     app.render(req, res, '/bases-locales/validator', {
       ...req.query
